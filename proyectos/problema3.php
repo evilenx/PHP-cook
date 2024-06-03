@@ -5,8 +5,9 @@
     </head>
     <body>
         <h1>Préstamo Personal</h1>
+        <h3>Emanuel Avilés</h3>
         <p>Ingresa los datos del préstamo para calcular el monto a pagar.</p>
-        <form action="ejercicio3.php" method="post">
+        <form action="problema3.php" method="post">
             <label>Monto del préstamo: </label>
             <input type="number" name="monto"><br>
             <label>Tipo de empleado: </label>
@@ -25,9 +26,9 @@ $monto = $_POST['monto'];
 $empleado = $_POST['empleado'];
 
 if ($empleado == "publico") {
-    $interes = $monto * 0.07; // 7% de interés para empleados públicos
+    $interes = $monto * 0.09; // 9% de interés para empleados públicos
 } else {
-    $interes = $monto * 0.09; // 9% de interés para empleados privados
+    $interes = $monto * 0.11; // 11% de interés para empleados privados
 }
 
 $monto_a_pagar = $monto + $interes;
